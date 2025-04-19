@@ -73,6 +73,7 @@ function LoginPage() {
         console.log('Logging in with:', email, password);
         alert('Login functionality will be implemented here. Redirecting to dashboard...');
         // navigate('/dashboard'); // Redirect after successful login
+        navigate('/dashboard');
       } else {
         console.log('Signing up with:', name, email, password);
         alert('Signup functionality will be implemented here. Redirecting to dashboard...');
