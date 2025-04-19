@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { FaSatelliteDish, FaBrain, FaMobileAlt } from 'react-icons/fa';
 import { MdBarChart } from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
 
 function LandingPage() {
   const [soilMoisture, setSoilMoisture] = useState('');
   const [temperature, setTemperature] = useState('');
   const [prediction, setPrediction] = useState('');
+  const navigate = useNavigate(); 
 
   const handleMoistureChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSoilMoisture(event.target.value);
@@ -29,7 +31,7 @@ function LandingPage() {
   };
 
   const handleGetStartedClick = () => {
-    alert('Navigating to Signup/Login');
+    navigate('/login');
   };
 
   return (
@@ -45,9 +47,8 @@ function LandingPage() {
           </div>
         </div>
       </nav>
-
-      {/* Hero Section */}
-      <header className="container mx-auto py-24 text-center">
+{/* Hero Section */}
+<header className="container mx-auto py-24 text-center">
         <img
           src="/smart-farming-hero.jpg"
           alt="Smart Agriculture"
@@ -82,7 +83,7 @@ function LandingPage() {
         </p>
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full mt-8"
-          onClick={handleGetStartedClick}
+          onClick={handleGetStartedClick} // This function will now lead to login
         >
           Get Started for Free
         </button>

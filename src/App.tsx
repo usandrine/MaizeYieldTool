@@ -1,12 +1,18 @@
-import React from 'react'
-import LandingPage from "./pages/LandingPage"
+// In your App.tsx or routing file
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import LoginPage from './pages/LoginPage';
 
 function App() {
   return (
-    <div className="bg-blue-500">
-      <LandingPage />
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        {/* ... other routes */}
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
