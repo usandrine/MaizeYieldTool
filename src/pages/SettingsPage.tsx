@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // If you decide to use Link for navigation
 
 function SettingsPage() {
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light'); // Get theme from local storage or default to light
+
+  useEffect(() => {
+    document.body.className = theme; // Set the theme as a class on the body
+    localStorage.setItem('theme', theme); // Save theme to local storage
+  }, [theme]);
+
+  const handleThemeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTheme(event.target.value);
+  };
+
   return (
-    <div className="bg-gray-100 min-h-screen p-6">
+    <div className={`bg-gray-100 min-h-screen p-6 ${theme === 'dark' ? 'dark-bg' : ''}`}>
       <div className="bg-white rounded-lg shadow-md p-8">
         <Link to="/dashboard" className="text-green-600 hover:underline mb-4 block">
           ← Back to Dashboard
@@ -165,12 +176,26 @@ function SettingsPage() {
               Theme:
             </label>
             <label className="inline-flex items-center">
-              <input type="radio" className="form-radio h-5 w-5 text-green-600" name="theme" value="light" defaultChecked />
+              <input
+                type="radio"
+                className="form-radio h-5 w-5 text-green-600"
+                name="theme"
+                value="light"
+                checked={theme === 'light'}
+                onChange={handleThemeChange}
+              />
               <span className="ml-2 text-gray-700">Light</span>
             </label>
             <label className="inline-flex items-center">
-              <input type="radio" className="form-radio h-5 w-5 text-green-600" name="theme" value="dark" />
-              <span className="ml-2 text-gray-700">Dark (Coming Soon)</span>
+              <input
+                type="radio"
+                className="form-radio h-5 w-5 text-green-600"
+                name="theme"
+                value="dark"
+                checked={theme === 'dark'}
+                onChange={handleThemeChange}
+              />
+              <span className="ml-2 text-gray-700">Dark</span>
             </label>
           </div>
           {/* Language selection can be added here later */}
@@ -194,8 +219,6 @@ function SettingsPage() {
           </button>
           {/* You could add options for different export formats later */}
         </div>
-
-        {/* Add more settings sections as needed */}
       </div>
     </div>
   );

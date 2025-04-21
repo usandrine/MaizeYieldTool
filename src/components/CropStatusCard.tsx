@@ -1,46 +1,40 @@
 import React from 'react';
-import { WiHumidity, WiThermometer, WiRaindrop } from 'react-icons/wi'; // Weather icons
-// import { BiPlant, BiErrorCircleFill } from 'react-icons/bi'; // Bootstrap Icons (commented out)
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSeedling, faCalendarAlt, faClock } from '@fortawesome/free-solid-svg-icons';
 
 function CropStatusCard() {
-  return (
-    <div className="bg-white shadow-md rounded-lg p-6">
-      <h2 className="text-xl font-semibold text-green-600 mb-4 flex items-center space-x-2">
-        {/* <span className="text-2xl"><BiPlant /></span> */}
-        <span>Current Crop Status</span>
-      </h2>
-      <div className="grid grid-cols-2 gap-4">
-        <div className="flex items-center space-x-2">
-          <span className="text-xl text-blue-500"><WiHumidity /></span>
-          <div>
-            <p className="text-gray-700 font-semibold text-sm">Moisture:</p>
-            <p className="text-lg">42%</p> {/* Placeholder */}
-          </div>
+    const currentGrowthStage = 'Vegetative Stage (V8)';
+    const plantingDate = '2025-03-20';
+    const estimatedHarvestDate = '2025-08-05';
+    const daysSincePlanting = Math.floor((Date.now() - new Date(plantingDate).getTime()) / (1000 * 60 * 60 * 24));
+
+    return (
+        <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500">
+            <h2 className="text-xl font-semibold text-green-700 mb-4 flex items-center">
+                <FontAwesomeIcon icon={faSeedling} className="mr-2 text-green-500" /> Maize Crop Status
+            </h2>
+            <div className="mb-2 flex items-center">
+                <FontAwesomeIcon icon={faSeedling} className="mr-2 text-yellow-500" />
+                <span className="font-semibold text-gray-700">Growth Stage:</span>
+                <span className="ml-2 text-gray-600">{currentGrowthStage}</span>
+            </div>
+            <div className="mb-2 flex items-center">
+                <FontAwesomeIcon icon={faCalendarAlt} className="mr-2 text-blue-500" />
+                <span className="font-semibold text-gray-700">Planting Date:</span>
+                <span className="ml-2 text-gray-600">{plantingDate}</span>
+            </div>
+            <div className="mb-2 flex items-center">
+                <FontAwesomeIcon icon={faClock} className="mr-2 text-orange-500" />
+                <span className="font-semibold text-gray-700">Days Since Planting:</span>
+                <span className="ml-2 text-gray-600">{daysSincePlanting}</span>
+            </div>
+            <div className="flex items-center">
+                <FontAwesomeIcon icon={faCalendarAlt} className="mr-2 text-blue-500" />
+                <span className="font-semibold text-gray-700">Estimated Harvest:</span>
+                <span className="ml-2 text-gray-600">{estimatedHarvestDate}</span>
+            </div>
         </div>
-        <div className="flex items-center space-x-2">
-          <span className="text-xl text-orange-500"><WiThermometer /></span>
-          <div>
-            <p className="text-gray-700 font-semibold text-sm">Temperature:</p>
-            <p className="text-lg">28°C</p> {/* Placeholder */}
-          </div>
-        </div>
-        <div className="flex items-center space-x-2">
-          <span className="text-xl text-blue-700"><WiRaindrop /></span>
-          <div>
-            <p className="text-gray-700 font-semibold text-sm">pH:</p>
-            <p className="text-lg">6.5</p> {/* Placeholder */}
-          </div>
-        </div>
-        <div className="flex items-center space-x-2">
-          {/* <span className="text-xl text-red-500"><BiErrorCircleFill /></span> */}
-          <div>
-            <p className="text-gray-700 font-semibold text-sm">Alerts:</p>
-            <p className="text-lg text-red-500">⚠️ High</p> {/* Placeholder */}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    );
 }
 
 export default CropStatusCard;
