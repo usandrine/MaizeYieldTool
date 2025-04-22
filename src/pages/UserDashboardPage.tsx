@@ -48,6 +48,12 @@ function UserDashboardPage() {
                         <Link to="/yield-prediction" className="block py-2 px-4 text-gray-700 hover:bg-green-100 hover:text-green-700 rounded-md transition duration-150 ease-in-out">
                             <span className="mr-3">📈</span> Maize Yield Prediction
                         </Link>
+                        <Link to="/planting-harvesting" className="block py-2 px-4 text-gray-700 hover:bg-green-100 hover:text-green-700 rounded-md transition duration-150 ease-in-out">
+        <span className="mr-3">🌱</span> Planting Records {/* You can choose a more relevant icon */}
+    </Link>
+    <Link to="/input-management" className="block py-2 px-4 text-gray-700 hover:bg-green-100 hover:text-green-700 rounded-md transition duration-150 ease-in-out">
+        <span className="mr-3">🧪</span> Input Management {/* Choose an appropriate icon */}
+    </Link>
                         <a href="#tasks-alerts-card" className="block py-2 px-4 text-gray-700 hover:bg-green-100 hover:text-green-700 rounded-md transition duration-150 ease-in-out">
                             <span className="mr-3">🔔</span> Maize Alerts
                         </a>
