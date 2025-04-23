@@ -70,7 +70,7 @@ function UserDashboardPage() {
                 </div>
                 {/* Logout link remains at the bottom */}
                 <div className="mt-8 pt-4 border-t border-gray-200">
-                    <a href="/logout" className="block py-2 px-4 text-red-600 hover:bg-red-100 hover:text-red-700 rounded-md transition duration-150 ease-in-out">
+                    <a href="/" className="block py-2 px-4 text-red-600 hover:bg-red-100 hover:text-red-700 rounded-md transition duration-150 ease-in-out">
                         <span>🚪</span> Logout
                     </a>
                 </div>
@@ -109,7 +109,12 @@ function UserDashboardPage() {
                             </div>
                         )}
                     </button>
-                    <span className="text-gray-700">Profile</span>
+                    <Link to="/profile" className="ml-4 text-blue-500 hover:underline cursor-pointer">
+                    Profile
+                </Link>
+
+                
+
                 </div>
 
                 {/* Main Content Grid */}
