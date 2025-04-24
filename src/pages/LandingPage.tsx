@@ -204,8 +204,8 @@ function LandingPage() {
                     <span className="font-bold text-lg">AgriYield</span>
                     <p className="mt-2 text-sm">&copy; {new Date().getFullYear()} All rights reserved.</p>
                     <div className="mt-4 space-x-4">
-                        <a href="#" className="hover:underline">Privacy Policy</a>
-                        <a href="#" className="hover:underline">Terms of Service</a>
+                        <a href="privacy-policy" className="hover:underline">Privacy Policy</a>
+                        <a href="terms-of-service" className="hover:underline">Terms of Service</a>
                     </div>
                 </div>
             </footer>

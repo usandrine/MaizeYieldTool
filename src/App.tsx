@@ -9,6 +9,8 @@ import InputManagementPage from './pages/InputManagementPage'; // Make sure this
 import ReportsAnalyticsPage from './pages/ReportsAnalyticsPage'; // Import the new page
 import ProfilePage from './pages/ProfilePage';
 import AboutPage from './pages/AboutPage'; // Import AboutPage
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage'; // Import PrivacyPolicyPage
+import TermsOfServicePage from './pages/TermsOfServicePage'; // Import TermsOfServicePage
 // import AdminDashboardPage from './pages/AdminDashboardPage'; // We'll import this later
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
         <Route path="/reports-analytics" element={<ReportsAnalyticsPage />} /> {/* Ensure this route is present */}
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/about" element={<AboutPage />} /> {/* Route for About Page */}
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} /> {/* Route for Privacy Policy */}
+                <Route path="/terms-of-service" element={<TermsOfServicePage />} /> {/* Route for Terms of Service */}
                 {/* ... other routes */}
         {/* <Route path="/admin/dashboard" element={<AdminDashboardPage />} /> */} {/* Example route for admin */}
       </Routes>
