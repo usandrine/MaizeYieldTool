@@ -8,6 +8,7 @@ import PlantingHarvestingRecordsPage from './pages/PlantingHarvestingRecordsPage
 import InputManagementPage from './pages/InputManagementPage'; // Make sure this import exists
 import ReportsAnalyticsPage from './pages/ReportsAnalyticsPage'; // Import the new page
 import ProfilePage from './pages/ProfilePage';
+import AboutPage from './pages/AboutPage'; // Import AboutPage
 // import AdminDashboardPage from './pages/AdminDashboardPage'; // We'll import this later
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/input-management" element={<InputManagementPage />} /> {/* Ensure this route is present */}
         <Route path="/reports-analytics" element={<ReportsAnalyticsPage />} /> {/* Ensure this route is present */}
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/about" element={<AboutPage />} /> {/* Route for About Page */}
                 {/* ... other routes */}
         {/* <Route path="/admin/dashboard" element={<AdminDashboardPage />} /> */} {/* Example route for admin */}
       </Routes>
