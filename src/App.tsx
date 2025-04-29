@@ -11,7 +11,10 @@ import ProfilePage from './pages/ProfilePage';
 import AboutPage from './pages/AboutPage'; // Import AboutPage
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage'; // Import PrivacyPolicyPage
 import TermsOfServicePage from './pages/TermsOfServicePage'; // Import TermsOfServicePage
-import AdminDashboardPage from './pages/AdminDashboardPage';
+import AdminDashboardPage from './pages/Admin/AdminDashboardPage';
+import UserManagementPage from './pages/Admin/UserManagementPage';
+import AdminReportsAnalyticsPage from './pages/Admin/AdminReportsAnalyticsPage';
+import AdminAlertsPage from './pages/Admin/AdminAlertspage';
 // import AdminDashboardPage from './pages/AdminDashboardPage'; // We'll import this later
 
 function App() {
@@ -32,6 +35,10 @@ function App() {
                 <Route path="/terms-of-service" element={<TermsOfServicePage />} /> {/* Route for Terms of Service */}
                 {/* ... other routes */}
                 <Route path="/Admin-Dashboard" element={<AdminDashboardPage />} />
+                <Route path="/User-Management" element={<UserManagementPage />} />
+                <Route path="/Admin-Reports-Analytics" element={<AdminReportsAnalyticsPage />} />
+                <Route path="/Admin-Alerts" element={<AdminAlertsPage />} />
+
         {/* <Route path="/admin/dashboard" element={<AdminDashboardPage />} /> */} {/* Example route for admin */}
       </Routes>
     </BrowserRouter>

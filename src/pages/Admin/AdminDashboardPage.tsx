@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUsers, faChartBar, faCog, faSignOutAlt, faTachometerAlt } from '@fortawesome/free-solid-svg-icons'; // Key icons
+import { faUsers, faChartBar, faCog, faSignOutAlt, faTachometerAlt, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'; // Added faChartBar and faExclamationTriangle
 
-function AdminDashboardPage() {
+function AdminOverviewPage() {
     return (
         <div className="bg-gray-100 min-h-screen flex">
             {/* Sidebar Navigation */}
@@ -17,16 +17,19 @@ function AdminDashboardPage() {
                     {/* Navigation Links - Focusing on key admin features */}
                     <nav>
                         <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Admin Menu</h3>
-                        <Link to="/admin/dashboard" className="block py-2 px-4 text-gray-700 hover:bg-indigo-100 hover:text-indigo-700 rounded-md transition duration-150 ease-in-out">
+                        <Link to="/Admin-Dashboard" className="block py-2 px-4 text-gray-700 hover:bg-indigo-100 hover:text-indigo-700 rounded-md transition duration-150 ease-in-out">
                             <FontAwesomeIcon icon={faTachometerAlt} className="mr-3" /> Dashboard
                         </Link>
-                        <Link to="/admin/users" className="block py-2 px-4 text-gray-700 hover:bg-indigo-100 hover:text-indigo-700 rounded-md transition duration-150 ease-in-out">
+                        <Link to="/User-Management" className="block py-2 px-4 text-gray-700 hover:bg-indigo-100 hover:text-indigo-700 rounded-md transition duration-150 ease-in-out">
                             <FontAwesomeIcon icon={faUsers} className="mr-3" /> User Management
                         </Link>
-                        <Link to="/admin/reports" className="block py-2 px-4 text-gray-700 hover:bg-indigo-100 hover:text-indigo-700 rounded-md transition duration-150 ease-in-out">
+                        <Link to="/Admin-Reports-Analytics" className="block py-2 px-4 text-gray-700 hover:bg-indigo-100 hover:text-indigo-700 rounded-md transition duration-150 ease-in-out">
                             <FontAwesomeIcon icon={faChartBar} className="mr-3" /> Reports & Analytics
                         </Link>
-                        <Link to="/admin/settings" className="block py-2 px-4 text-gray-700 hover:bg-indigo-100 hover:text-indigo-700 rounded-md transition duration-150 ease-in-out">
+                        <Link to="/Admin-Alerts" className="block py-2 px-4 text-gray-700 hover:bg-indigo-100 hover:text-indigo-700 rounded-md transition duration-150 ease-in-out">
+                            <FontAwesomeIcon icon={faExclamationTriangle} className="mr-3" /> System Alerts
+                        </Link>
+                        <Link to="/Admin-settings" className="block py-2 px-4 text-gray-700 hover:bg-indigo-100 hover:text-indigo-700 rounded-md transition duration-150 ease-in-out">
                             <FontAwesomeIcon icon={faCog} className="mr-3" /> Settings
                         </Link>
                         {/* Removed Alerts and Send Alerts for absolute simplicity - can add back later */}
@@ -46,15 +49,15 @@ function AdminDashboardPage() {
                     <span className="text-gray-700">👤 Admin Name</span>
                 </div>
 
-                {/* Main Content - Simplified Placeholder */}
+                {/* Main Content - Placeholder for the Admin Dashboard Overview */}
                 <div className="bg-white rounded-md shadow-sm p-6">
                     <h2 className="text-xl font-semibold text-gray-800 mb-4">Admin Dashboard</h2>
                     <p className="text-gray-600">Welcome to the Admin Dashboard.</p>
-                    {/* You will add actual admin content here */}
+                    {/* You will add actual admin overview content here */}
                 </div>
             </main>
         </div>
     );
 }
 
-export default AdminDashboardPage;
+export default AdminOverviewPage;
