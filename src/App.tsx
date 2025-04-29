@@ -11,6 +11,7 @@ import ProfilePage from './pages/ProfilePage';
 import AboutPage from './pages/AboutPage'; // Import AboutPage
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage'; // Import PrivacyPolicyPage
 import TermsOfServicePage from './pages/TermsOfServicePage'; // Import TermsOfServicePage
+import AdminDashboardPage from './pages/AdminDashboardPage';
 // import AdminDashboardPage from './pages/AdminDashboardPage'; // We'll import this later
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} /> {/* Route for Privacy Policy */}
                 <Route path="/terms-of-service" element={<TermsOfServicePage />} /> {/* Route for Terms of Service */}
                 {/* ... other routes */}
+                <Route path="/Admin-Dashboard" element={<AdminDashboardPage />} />
         {/* <Route path="/admin/dashboard" element={<AdminDashboardPage />} /> */} {/* Example route for admin */}
       </Routes>
     </BrowserRouter>
