@@ -11,9 +11,16 @@ function AdminReportsAnalyticsPage() {
                     <div className="bg-gray-50 rounded-md p-4 shadow-sm">
                         <h3 className="text-lg font-semibold text-gray-700 mb-2">User Growth</h3>
                         <p className="text-gray-600">Trends in new user registrations over time (e.g., monthly, yearly).</p>
-                        {/* Placeholder for a line chart */}
-                        <div className="h-32 bg-gray-200 rounded-md mt-2 flex items-center justify-center text-gray-500">
-                            [Line Chart Placeholder]
+                        {/* Basic Line Chart Placeholder */}
+                        <div className="h-32 bg-gray-200 rounded-md mt-2 flex items-center justify-center text-gray-500 overflow-hidden relative">
+                            <div style={{ width: '80%', height: '60%', borderBottom: '2px solid #4c51bf', borderLeft: '2px solid #4c51bf', position: 'absolute', bottom: '20%', left: '10%' }}>
+                                {/* Imagine points plotted along this line */}
+                                <div style={{ position: 'absolute', bottom: '10%', left: '10%', width: '10px', height: '10px', backgroundColor: '#4c51bf', borderRadius: '50%' }}></div>
+                                <div style={{ position: 'absolute', bottom: '40%', left: '30%', width: '10px', height: '10px', backgroundColor: '#4c51bf', borderRadius: '50%' }}></div>
+                                <div style={{ position: 'absolute', bottom: '25%', left: '50%', width: '10px', height: '10px', backgroundColor: '#4c51bf', borderRadius: '50%' }}></div>
+                                <div style={{ position: 'absolute', bottom: '50%', left: '70%', width: '10px', height: '10px', backgroundColor: '#4c51bf', borderRadius: '50%' }}></div>
+                                <div style={{ position: 'absolute', bottom: '30%', left: '90%', width: '10px', height: '10px', backgroundColor: '#4c51bf', borderRadius: '50%' }}></div>
+                            </div>
                         </div>
                     </div>
 
@@ -21,9 +28,12 @@ function AdminReportsAnalyticsPage() {
                     <div className="bg-gray-50 rounded-md p-4 shadow-sm">
                         <h3 className="text-lg font-semibold text-gray-700 mb-2">Active Users</h3>
                         <p className="text-gray-600">Number of users active on the platform (e.g., daily, weekly, monthly).</p>
-                        {/* Placeholder for a bar chart or a numerical display */}
-                        <div className="h-32 bg-gray-200 rounded-md mt-2 flex items-center justify-center text-gray-500">
-                            [Bar Chart/Number Placeholder]
+                        {/* Basic Bar Chart Placeholder */}
+                        <div className="h-32 bg-gray-200 rounded-md mt-2 flex items-center justify-around">
+                            <div style={{ height: '30%', width: '15%', backgroundColor: '#68d391', borderRadius: '4px 4px 0 0' }}></div>
+                            <div style={{ height: '60%', width: '15%', backgroundColor: '#68d391', borderRadius: '4px 4px 0 0' }}></div>
+                            <div style={{ height: '45%', width: '15%', backgroundColor: '#68d391', borderRadius: '4px 4px 0 0' }}></div>
+                            <div style={{ height: '75%', width: '15%', backgroundColor: '#68d391', borderRadius: '4px 4px 0 0' }}></div>
                         </div>
                     </div>
 
@@ -31,9 +41,12 @@ function AdminReportsAnalyticsPage() {
                     <div className="bg-gray-50 rounded-md p-4 shadow-sm">
                         <h3 className="text-lg font-semibold text-gray-700 mb-2">Content Engagement</h3>
                         <p className="text-gray-600">Metrics on how users are interacting with key features or content.</p>
-                        {/* Placeholder for a pie chart or data table */}
-                        <div className="h-32 bg-gray-200 rounded-md mt-2 flex items-center justify-center text-gray-500">
-                            [Pie Chart/Table Placeholder]
+                        {/* Basic Pie Chart Placeholder */}
+                        <div className="h-32 bg-gray-200 rounded-md mt-2 flex items-center justify-center relative overflow-hidden">
+                            <div style={{ width: '60%', height: '60%', borderRadius: '50%', backgroundColor: '#f6ad55', position: 'absolute' }}>
+                                <div style={{ width: '50%', height: '100%', backgroundColor: '#ed64a6', borderRadius: '50% 0 0 50%', position: 'absolute', left: 0 }}></div>
+                            </div>
+                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-500">[Pie]</div>
                         </div>
                     </div>
                 </div>
@@ -43,9 +56,16 @@ function AdminReportsAnalyticsPage() {
                     <div className="bg-gray-50 rounded-md p-4 shadow-sm">
                         <h3 className="text-lg font-semibold text-gray-700 mb-2">System Performance</h3>
                         <p className="text-gray-600">Key indicators of system health and performance (e.g., load, response times).</p>
-                        {/* Placeholder for gauges or key performance indicators */}
-                        <div className="h-32 bg-gray-200 rounded-md mt-2 flex items-center justify-center text-gray-500">
-                            [KPIs/Gauges Placeholder]
+                        {/* Basic KPI/Gauge Placeholder */}
+                        <div className="h-32 bg-gray-200 rounded-md mt-2 flex items-center justify-around">
+                            <div>
+                                <div className="text-2xl font-bold text-indigo-600">75%</div>
+                                <div className="text-sm text-gray-500">CPU Load</div>
+                            </div>
+                            <div>
+                                <div className="text-2xl font-bold text-green-600">200ms</div>
+                                <div className="text-sm text-gray-500">Avg. Response</div>
+                            </div>
                         </div>
                     </div>
 
